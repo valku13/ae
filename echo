@@ -1,0 +1,5 @@
+@echo off
+echo Compiling %1
+Set COMPPATH="C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\amd64"
+Set COMPLIBPATH=C:\Program Files (x86)\Windows Kits\10\Lib\10.0.14393.0\um\x64
+%COMPPATH%\ml64 %1 /link /subsystem:windows /defaultlib:"%COMPLIBPATH%\kernel32.lib" /defaultlib:"%COMPLIBPATH%\user32.lib" /entry:Start
